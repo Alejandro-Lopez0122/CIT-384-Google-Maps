@@ -9,6 +9,9 @@ const locations = [
   { name: "Bayramian Hall", position: { lat: 34.2403636, lng: -118.5310838 } },
 ];
 
+let rectangles = [];
+let highScore = 0;
+
 function initMap() {
   const mapOptions = {
     center: { lat: 34.242573, lng: -118.529456 },
@@ -43,6 +46,8 @@ function initMap() {
     hideNotification();
     checkLocation(e.latLng);
   });
+
+  document.getElementById("reset-button").addEventListener("click", resetGame);
 
   promptNextLocation();
 }
@@ -103,6 +108,7 @@ function promptNextLocation() {
   if (currentLocation < locations.length) {
     directionsElement.textContent = `Directions: Double click on ${locations[currentLocation].name}`;
   } else {
+    updateHighScore();
     directionsElement.textContent = `Game Finished!`;
   }
 }
@@ -127,4 +133,33 @@ function drawRectangle(position, isCorrect) {
       west: southWest.lng(),
     },
   });
+
+  // Add the rectangle to the rectangles array
+  rectangles.push(rectangle);
 }
+
+function resetGame() {
+  // Remove all drawn rectangles
+  rectangles.forEach((rectangle) => {
+    rectangle.setMap(null);
+  });
+
+  // Clear the rectangles array
+  rectangles = [];
+
+  // Reset the game state
+  correctLocations = 0;
+  currentLocation = 0;
+  document.getElementById("score").textContent = `Score: ${correctLocations}/${locations.length}`;
+
+  // Prompt the next location
+  promptNextLocation();
+}
+
+function updateHighScore() {
+  if (correctLocations > highScore) {
+    highScore = correctLocations;
+    document.getElementById("high-score").textContent = `High Score: ${highScore}/${locations.length}`;
+  }
+}
+
