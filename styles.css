@@ -56,3 +56,17 @@ html, body {
     border: 1px solid black;
   }
   
+  #reset-button {
+    background-color: #ffffff;
+    color: #d22030;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  #reset-button:hover {
+    background-color: #e6e6e6;
+  }
+  
