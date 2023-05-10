@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Define character encoding -->
     <meta charset="UTF-8" />
+    <!-- Set the viewport for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Set the page title -->
     <title>CSUN Map Game</title>
+    <!-- Link the external stylesheet -->
     <link rel="stylesheet" href="styles.css" />
+    <!-- Load the Google Maps JavaScript API with API key, geometry library, and a callback to initMap function -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPUF6tmjwW-Hqe7ddAJBW2TTBGyY8-1Xs&libraries=geometry&callback=initMap" async defer></script>
+    <!-- Include the JavaScript code -->
     <script src="script.js"></script>
   </head>
   <body>
+    <!-- Create a banner div containing game information and controls -->
     <div id="banner">
       <span id="title">CSUN</span>
       <span id="directions">Directions: Click on $location</span>
       <span id="score">Score: 0/5</span>
       <span id="high-score">High Score: 0/5</span>
+      <!-- Add a reset button to restart the game -->
       <button id="reset-button">Reset</button>
     </div>
+    <!-- Create a div to hold the Google Map -->
     <div id="map" style="width: 100%; height: 100vh"></div>
+    <!-- Create a notification div to show temporary messages -->
     <div id="notification" class="notification"></div>
   </body>
 </html>

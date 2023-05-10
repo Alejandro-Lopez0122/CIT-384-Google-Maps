@@ -1,72 +1,80 @@
+/* Set the height and margin for the html and body elements, and set the font family */
 html, body {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  #map {
-    height: calc(100% - 50px);
-    width: 100%;
-    padding: 0;
-  }
-  
-  #banner {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #d22030;
-    height: 50px;
-    padding: 0 10px;
-    color: #ffffff;
-    font-weight: bold;
-  }
-  
-  #title {
-    font-size: 1.5em;
-  }
-  
-  #directions,
-  #result-notification,
-  #score {
-    font-size: 1em;
-  }
-  
-  .notification {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 16px;
-    z-index: 100;
-    display: none;
-  }
-  
-  .result-notification {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid black;
-  }
-  
-  #reset-button {
-    background-color: #ffffff;
-    color: #d22030;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
-  
-  #reset-button:hover {
-    background-color: #e6e6e6;
-  }
-  
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Set the height and width for the map div */
+#map {
+  height: calc(100% - 50px);
+  width: 100%;
+  padding: 0;
+}
+
+/* Style the banner div with flexbox, background color, height, padding, text color, and font weight */
+#banner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #d22030;
+  height: 50px;
+  padding: 0 10px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Set the font size for the title */
+#title {
+  font-size: 1.5em;
+}
+
+/* Set the font size for the directions, result notification, and score elements */
+#directions,
+#result-notification,
+#score {
+  font-size: 1em;
+}
+
+/* Style the notification class elements with position, background color, padding, border radius, font size, z-index, and display */
+.notification {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  z-index: 100;
+  display: none;
+}
+
+/* Style the result notification elements with display, position, background color, padding, border radius, and border */
+.result-notification {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+/* Style the reset button with background color, text color, font weight, border, border radius, padding, and cursor */
+#reset-button {
+  background-color: #ffffff;
+  color: #d22030;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Change the background color of the reset button on hover */
+#reset-button:hover {
+  background-color: #e6e6e6;
+}
